@@ -1,0 +1,56 @@
+<h1>
+  Habilitação - Atualiza conteúdo
+</h1>
+
+<p class="alert alert-info">
+  USO EXCLUSIVO PARA DESENVOLVIMENTO E TESTES
+</p>
+
+Coloque aqui o texto para atualizar o conteudo:
+
+<br><br>
+
+<div class="row g-2">
+  <div class="col-6">
+    <div class="form-floating">
+
+      <textarea
+        id="textoOriginal"
+        placeholder="Insira o texto original"
+        [(ngModel)]="textoOriginal" class="form-control"
+      >
+
+      </textarea>
+
+    </div>
+
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+
+      <textarea
+        id="textoTratado"
+        placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
+        [(ngModel)]="textoTratado"
+        class="form-control"
+        readonly
+      >
+
+      </textarea>
+
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row g-12">
+  <button
+    (click)="tratamentoDoProcesso(textoOriginal)"
+    class="btn btn-success"
+    type="button">
+
+    Formatar Json<i class="fa fa-angle-right"></i>
+  </button>
+</div>
+
